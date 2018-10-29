@@ -38,12 +38,12 @@ TODO: Add long description of the pod here.
       ss.subspec 'EmptyDataSet' do |sss|
           sss.source_files = 'BLBase/Classes/BLTableView/EmptyDataSet/**/*'
           sss.dependency 'DZNEmptyDataSet'
-          sss.dependency 'BLTableView/Base'
+          sss.dependency 'BLBase/BLTableView/Base'
       end
       ss.subspec 'Refresh' do |sss|
           sss.source_files = 'BLBase/Classes/BLTableView/Refresh/**/*'
           sss.dependency 'MJRefresh'
-          sss.dependency 'BLTableView/Base'
+          sss.dependency 'BLBase/BLTableView/Base'
       end
   end
   
