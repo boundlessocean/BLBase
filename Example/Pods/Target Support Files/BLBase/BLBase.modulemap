@@ -1,0 +1,6 @@
+framework module BLBase {
+  umbrella header "BLBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

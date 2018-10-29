@@ -1,0 +1,16 @@
+PODS:
+  - BLBase (0.1.0)
+
+DEPENDENCIES:
+  - BLBase (from `../`)
+
+EXTERNAL SOURCES:
+  BLBase:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BLBase: 80fd90d1a011d6b0cfda524af79b0c09b17853ce
+
+PODFILE CHECKSUM: 32cf1bc3d0897461b044f58c30375314a55095b0
+
+COCOAPODS: 1.5.3
