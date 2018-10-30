@@ -168,6 +168,7 @@
     animation.autoreverses = NO;
     animation.fillMode =kCAFillModeForwards;
     animation.repeatCount = MAXFLOAT;
+    animation.removedOnCompletion = NO;
     [self.boxView.layer addAnimation:animation forKey:@"rotation"];
     
     
