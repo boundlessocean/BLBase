@@ -11,6 +11,8 @@
 #endif
 
 #import "BLModel.h"
+#import "BLNavigationController.h"
+#import "BLTabBarController.h"
 #import "BLTableView.h"
 #import "BLTableView+EmptyDataSource.h"
 #import "BLTableView+Refresh.h"

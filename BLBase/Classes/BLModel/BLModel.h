@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BLModel : NSObject
-
+@property (nonatomic, strong) NSString *msg;
+@property (nonatomic, assign) NSInteger code;
 @end
 
 NS_ASSUME_NONNULL_END

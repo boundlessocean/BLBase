@@ -7,13 +7,37 @@
 //
 
 #import "MyAppDelegate.h"
-
+@import BLBase.BLTabBarController;
+@import BLBase.BLNavigationController;
+#import "MyViewController.h"
 @implementation MyAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window.rootViewController = [self initianizeTabBar];
+    _window.backgroundColor = [UIColor whiteColor];
+    [_window makeKeyAndVisible];
     return YES;
+}
+
+- (BLTabBarController *)initianizeTabBar{
+    BLTabBarController *tabbar = BLTabBarController.new;
+    tabbar.selectColor = [UIColor redColor];
+    tabbar.defaultColor = [UIColor greenColor];
+    [tabbar initializeNav:[self initianizeNav] VC:MyViewController.new title:@"a" image:[UIImage imageNamed:@"返回"] selectedImage:[UIImage imageNamed:@"返回"]];
+    [tabbar initializeNav:[self initianizeNav] VC:MyViewController.new title:@"b" image:[UIImage imageNamed:@"返回"] selectedImage:[UIImage imageNamed:@"返回"]];
+    return tabbar;
+}
+
+
+- (BLNavigationController *)initianizeNav{
+    BLNavigationController *nav = [BLNavigationController new];
+    nav.backImage = [UIImage imageNamed:@"返回"];
+    nav.bgColor = [UIColor redColor];
+    nav.titleColor = [UIColor whiteColor];
+    nav.titleFont = [UIFont systemFontOfSize:12];
+    return nav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

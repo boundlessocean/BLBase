@@ -1,15 +1,50 @@
 PODS:
-  - BLBase (0.1.0)
+  - BLBase (0.1.0):
+    - BLBase/BLModel (= 0.1.0)
+    - BLBase/BLNavigationController (= 0.1.0)
+    - BLBase/BLTabBarController (= 0.1.0)
+    - BLBase/BLTableView (= 0.1.0)
+    - BLBase/BLView (= 0.1.0)
+    - BLBase/BLViewController (= 0.1.0)
+  - BLBase/BLModel (0.1.0)
+  - BLBase/BLNavigationController (0.1.0)
+  - BLBase/BLTabBarController (0.1.0)
+  - BLBase/BLTableView (0.1.0):
+    - BLBase/BLTableView/Base (= 0.1.0)
+    - BLBase/BLTableView/EmptyDataSet (= 0.1.0)
+    - BLBase/BLTableView/Refresh (= 0.1.0)
+  - BLBase/BLTableView/Base (0.1.0)
+  - BLBase/BLTableView/EmptyDataSet (0.1.0):
+    - BLBase/BLTableView/Base
+    - DZNEmptyDataSet
+  - BLBase/BLTableView/Refresh (0.1.0):
+    - BLBase/BLTableView/Base
+    - MJRefresh
+  - BLBase/BLView (0.1.0)
+  - BLBase/BLViewController (0.1.0):
+    - Masonry
+  - DZNEmptyDataSet (1.8.1)
+  - Masonry (1.1.0)
+  - MJRefresh (3.1.15.7)
 
 DEPENDENCIES:
   - BLBase (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DZNEmptyDataSet
+    - Masonry
+    - MJRefresh
 
 EXTERNAL SOURCES:
   BLBase:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLBase: 80fd90d1a011d6b0cfda524af79b0c09b17853ce
+  BLBase: a9d448b7dcd10c46c0bea3de598d18f04418811b
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
 
 PODFILE CHECKSUM: 32cf1bc3d0897461b044f58c30375314a55095b0
 

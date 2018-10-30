@@ -10,7 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BLView : UIView
-
+@property(nonatomic,copy) void(^bs_viewAction)(id data,...);
+- (void)bs_initializeSubviews;
+- (void)bs_configActions;
 @end
 
 NS_ASSUME_NONNULL_END

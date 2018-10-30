@@ -18,5 +18,64 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "BLBase/Classes/**/*"
+  "subspecs": [
+    {
+      "name": "BLTableView",
+      "subspecs": [
+        {
+          "name": "Base",
+          "source_files": "BLBase/Classes/BLTableView/Base/**/*"
+        },
+        {
+          "name": "EmptyDataSet",
+          "source_files": "BLBase/Classes/BLTableView/EmptyDataSet/**/*",
+          "dependencies": {
+            "DZNEmptyDataSet": [
+
+            ],
+            "BLBase/BLTableView/Base": [
+
+            ]
+          }
+        },
+        {
+          "name": "Refresh",
+          "source_files": "BLBase/Classes/BLTableView/Refresh/**/*",
+          "dependencies": {
+            "MJRefresh": [
+
+            ],
+            "BLBase/BLTableView/Base": [
+
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "BLModel",
+      "source_files": "BLBase/Classes/BLModel/**/*"
+    },
+    {
+      "name": "BLView",
+      "source_files": "BLBase/Classes/BLView/**/*"
+    },
+    {
+      "name": "BLViewController",
+      "source_files": "BLBase/Classes/BLViewController/**/*",
+      "dependencies": {
+        "Masonry": [
+
+        ]
+      }
+    },
+    {
+      "name": "BLNavigationController",
+      "source_files": "BLBase/Classes/BLNavigationController/**/*"
+    },
+    {
+      "name": "BLTabBarController",
+      "source_files": "BLBase/Classes/BLTabBarController/**/*"
+    }
+  ]
 }

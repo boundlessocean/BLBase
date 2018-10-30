@@ -57,6 +57,14 @@ TODO: Add long description of the pod here.
   
   s.subspec 'BLViewController' do |ss|
       ss.source_files = 'BLBase/Classes/BLViewController/**/*'
+      ss.dependency 'Masonry'
   end
   
+  s.subspec 'BLNavigationController' do |ss|
+      ss.source_files = 'BLBase/Classes/BLNavigationController/**/*'
+  end
+  
+  s.subspec 'BLTabBarController' do |ss|
+      ss.source_files = 'BLBase/Classes/BLTabBarController/**/*'
+  end
 end
