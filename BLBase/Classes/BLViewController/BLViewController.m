@@ -6,7 +6,7 @@
 //
 
 #import "BLViewController.h"
-@import Masonry;
+#import <Masonry/Masonry.h>
 @interface BLViewController ()
 @property (nonatomic, copy) void(^itemActionBlock)(void);
 @end
