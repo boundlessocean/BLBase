@@ -119,7 +119,7 @@ static char refreshBlockKey;
 }
 
 
-- (void)bs_configTable{
+- (void)bs_configRefreshTable{
     self.bs_supportRefreshUp = YES;
     self.bs_supportRefreshDown = YES;
     self.bs_refreshDownNeedRemoveAllDatas = YES;

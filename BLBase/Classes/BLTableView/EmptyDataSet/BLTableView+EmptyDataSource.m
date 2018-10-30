@@ -18,7 +18,7 @@ static char emptyBgColorKey;
 @implementation BLTableView (EmptyDataSource)
 
 #pragma mark - - OverWrite
-- (void)bs_configTable{
+- (void)bs_configEmptyTable{
     self.emptyDataSetSource = self;
     self.emptyDataSetDelegate = self;
 }
