@@ -32,6 +32,7 @@
 }
 
 - (void)bs_configViewDataSourse{
+    self.view.backgroundColor = [UIColor colorWithRed:240/255 green:240/255 blue:240/255 alpha:1];
     self.bs_loadingView.bs_isNeedLoading = YES;
     self.edgesForExtendedLayout = UIRectEdgeNone;
 }
