@@ -25,9 +25,13 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [self bs_configEmptyTable];
-        [self bs_configRefreshTable];
         [self p_configTable];
+        if ([self respondsToSelector:NSSelectorFromString(@"bs_configRefreshTable")]) {
+            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configRefreshTable") withObject:nil waitUntilDone:YES];
+        }
+        if ([self respondsToSelector:NSSelectorFromString(@"bs_configEmptyTable")]) {
+            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configEmptyTable") withObject:nil waitUntilDone:YES];
+        }
     }
     return self;
 }
@@ -35,9 +39,13 @@
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
     self = [super initWithFrame:frame style:style];
     if (self) {
-        [self bs_configEmptyTable];
-        [self bs_configRefreshTable];
         [self p_configTable];
+        if ([self respondsToSelector:NSSelectorFromString(@"bs_configRefreshTable")]) {
+            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configRefreshTable") withObject:nil waitUntilDone:YES];
+        }
+        if ([self respondsToSelector:NSSelectorFromString(@"bs_configEmptyTable")]) {
+            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configEmptyTable") withObject:nil waitUntilDone:YES];
+        }
     }
     return self;
 }
@@ -45,15 +53,18 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self bs_configEmptyTable];
-        [self bs_configRefreshTable];
         [self p_configTable];
+        if ([self respondsToSelector:NSSelectorFromString(@"bs_configRefreshTable")]) {
+            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configRefreshTable") withObject:nil waitUntilDone:YES];
+        }
+        if ([self respondsToSelector:NSSelectorFromString(@"bs_configEmptyTable")]) {
+            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configEmptyTable") withObject:nil waitUntilDone:YES];
+        }
     }
     return self;
 }
 
-- (void)bs_configRefreshTable{}
-- (void)bs_configEmptyTable{}
+
 
 #pragma mark - - Private
 - (void)p_configTable{

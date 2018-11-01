@@ -76,8 +76,5 @@ typedef void(^TableViewDidScroll)(__kindof UIScrollView *scrollView);
 /** 滚动到底部 */
 - (void)bs_tableViewScrollToBottom;
 
-/** 分类使用，用于初始化数据 */
-- (void)bs_configRefreshTable;
-- (void)bs_configEmptyTable;
 @end
 NS_ASSUME_NONNULL_END
