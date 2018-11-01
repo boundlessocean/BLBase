@@ -43,6 +43,8 @@
 		59C12E5229699AE8777ED19CD0C04EEC /* BLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 161F3FF134CF43D63D5C0D5D4588E67D /* BLViewController.m */; };
 		5C7512AC7468089677EB1D60EA0B3106 /* UIScrollView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = D25D78442CFCAF6FC721405B9BCE3C77 /* UIScrollView+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D389913AB98478AD119CEF2B5DB98E2 /* UIScrollView+EmptyDataSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A23889300A3F826E5875C9823E67C86 /* UIScrollView+EmptyDataSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CCA4B1218AFE2100A79825 /* BLCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 62CCA4AF218AFE2100A79825 /* BLCell.h */; };
+		62CCA4B2218AFE2100A79825 /* BLCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CCA4B0218AFE2100A79825 /* BLCell.m */; };
 		6656CF61704BC5D48BF88C7DA35A96BF /* BLNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CAFD92EC5475F93DD08D0F2CDA12DF95 /* BLNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		678380F8FD67CDC295A781440B49FE7F /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D6D0EC32857574E85B6EAC8BD66F9B04 /* ViewController+MASAdditions.m */; };
 		698FC8AA3577F2FFB33D33FF13D8E31D /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 445A70AB29D78060168CF7E5CC5B8281 /* MJRefreshAutoNormalFooter.m */; };
@@ -219,17 +221,19 @@
 		47260E3492B21D0648D167C5D3A6DFB7 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
 		50C25F3120B2F196F7D7120921A4DA4A /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
 		50FB45B793B765A7AECA4F6C3FE17016 /* Pods-BLBase_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLBase_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		510E681216B39D8D9F9696BEB490D138 /* Pods_BLBase_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLBase_Tests.framework; path = "Pods-BLBase_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5300F5221FAD7EC6725F90FA8818DBBB /* Pods_BLBase_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLBase_Example.framework; path = "Pods-BLBase_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		510E681216B39D8D9F9696BEB490D138 /* Pods_BLBase_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLBase_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5300F5221FAD7EC6725F90FA8818DBBB /* Pods_BLBase_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLBase_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5883985BD27D1902410009DAEE23BB26 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		5A0C7FE17CE0AF0860576AD0CCD5205E /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
 		5FBD18CEAC6161BEEE558BB48A66D347 /* BLBase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLBase-prefix.pch"; sourceTree = "<group>"; };
 		6123A35BB4C246FFE089DC1E0E69E585 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
 		61E64E5E1D62814990A943B3B2F80669 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		62CCA4AF218AFE2100A79825 /* BLCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCell.h; sourceTree = "<group>"; };
+		62CCA4B0218AFE2100A79825 /* BLCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLCell.m; sourceTree = "<group>"; };
 		64B7244DED2071C205EF40E99803025B /* Pods-BLBase_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLBase_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		68A9C3EEBE84BAB677C937868A770970 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69369078E9F0C451A9676AFE2CEC8373 /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
-		6AE734F7DAF747F0FD4ED6958C77B64A /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DZNEmptyDataSet.framework; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE734F7DAF747F0FD4ED6958C77B64A /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DZNEmptyDataSet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C46F96B451BDFA9954F67EF48747C28 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		6CDC93C52A1C44350C9454954EF2908C /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC236DD8821AED2D77DDCED58A1F976 /* Masonry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masonry.modulemap; sourceTree = "<group>"; };
@@ -244,7 +248,7 @@
 		7BA404E1E76578F6A4CC2AD092763A33 /* Pods-BLBase_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BLBase_Example.modulemap"; sourceTree = "<group>"; };
 		7FA6BF3C880E58E2D2253BCE33B21F28 /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
 		80980A28AB8551F5D48E10DC3C1428CA /* BLBase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLBase-umbrella.h"; sourceTree = "<group>"; };
-		823D1F8DD74971DE6A9111ED66F86C15 /* BLBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BLBase.framework; path = BLBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		823D1F8DD74971DE6A9111ED66F86C15 /* BLBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8307010E48F2DE6997A6D02528E6F6EB /* MJRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-umbrella.h"; sourceTree = "<group>"; };
 		83893AD4D93533E2766A2361F93542D9 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		85F2B7F228058F0FCF94765BDF1D3AD9 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
@@ -255,7 +259,7 @@
 		8EC931F26CAB4A43E74A01DF25F0B9D9 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		8EF2679A614FA1EF742181E9482221BD /* DZNEmptyDataSet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DZNEmptyDataSet-umbrella.h"; sourceTree = "<group>"; };
 		8F96E666BDB2F405EB1D131D7B3FB937 /* Pods-BLBase_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLBase_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9611DBF4E4AA69DB9BB401CFA04E469A /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackGifFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
 		9977D70B16D23645BF180E0D2E8650AE /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		9F9E9D58BE1A63B877F812477B08D093 /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshGifHeader.h; path = MJRefresh/Custom/Header/MJRefreshGifHeader.h; sourceTree = "<group>"; };
@@ -275,18 +279,18 @@
 		B415893366CE879F88BD04A780AE66A7 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
 		B6AD192E6A11101E61AE59DED05D241C /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		B7FD6AF0EFB44EBA84AF500C9117BCB4 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		B8739F90EB10CE37B425DB387B80E43A /* BLBase.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BLBase.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B8739F90EB10CE37B425DB387B80E43A /* BLBase.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BLBase.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BA2BF116B7D8C6C21E1E55A5E242C062 /* Pods-BLBase_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLBase_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BB3CE4795433C980332380B53F425758 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC3AE56B7BD1D82D34FE14115B549A28 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC3AE56B7BD1D82D34FE14115B549A28 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0322405126E180383A59145174F40A0 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		C0A1D020C2CF74C8AACED9BF2E60F0CF /* Pods-BLBase_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLBase_Example-resources.sh"; sourceTree = "<group>"; };
-		C0FFFCBDEE208E6B742FF673796DE8DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C0FFFCBDEE208E6B742FF673796DE8DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C11883A799803F516F9EFB76A3117F4A /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
 		C275B780918793A2FDA99780A01D58C2 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoFooter.h; path = MJRefresh/Base/MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		C4D883AA70CA483A572F54C1C7A57759 /* BLTableView+Refresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "BLTableView+Refresh.m"; path = "BLBase/Classes/BLTableView/Refresh/BLTableView+Refresh.m"; sourceTree = "<group>"; };
 		C6D06F0E97C672C77FCC8992F603F3A1 /* MJRefreshComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshComponent.h; path = MJRefresh/Base/MJRefreshComponent.h; sourceTree = "<group>"; };
-		C8450EF6BCABCE9991FFAAD4243CD4E4 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8450EF6BCABCE9991FFAAD4243CD4E4 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DFBD64EC12995C6ECFE10A449BD4FC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9759B31E9720D1BD8EE4B89E21C9AD9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C980782B0D3F66D48AF7C3AF9AB7F1D3 /* BLTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BLTabBarController.h; path = BLBase/Classes/BLTabBarController/BLTabBarController.h; sourceTree = "<group>"; };
@@ -311,7 +315,7 @@
 		E598E0F3D225FEBDB40BBB8BDFA65B47 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		E685B4DFCD96C06FF304581E1E6156BA /* MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefresh.h; path = MJRefresh/MJRefresh.h; sourceTree = "<group>"; };
 		EF6057A89C06773A35D17EA345E52043 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F0BDE04C2EA66924E1450C266E243942 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F0BDE04C2EA66924E1450C266E243942 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F35DB2D17E610C1BE58D12B402189874 /* UIView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MJExtension.h"; path = "MJRefresh/UIView+MJExtension.h"; sourceTree = "<group>"; };
 		F485C3F7C93FE626E773B2E2710EA4AD /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		F612D2FC5E901A11097D47909D85DE96 /* Pods-BLBase_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLBase_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -426,7 +430,6 @@
 				D6D0EC32857574E85B6EAC8BD66F9B04 /* ViewController+MASAdditions.m */,
 				684DFB3CCB0CD7FE7D3F793EA5EF03F7 /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -490,8 +493,17 @@
 				38DB6B4BF27BECC9F48CADE884BEAA18 /* UIScrollView+EmptyDataSet.m */,
 				784956E8E165829C766B3D7007942AB9 /* Support Files */,
 			);
-			name = DZNEmptyDataSet;
 			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
+		62CCA4AE218AFE0C00A79825 /* BLCell */ = {
+			isa = PBXGroup;
+			children = (
+				62CCA4AF218AFE2100A79825 /* BLCell.h */,
+				62CCA4B0218AFE2100A79825 /* BLCell.m */,
+			);
+			name = BLCell;
+			path = BLBase/Classes/BLCell;
 			sourceTree = "<group>";
 		};
 		684DFB3CCB0CD7FE7D3F793EA5EF03F7 /* Support Files */ = {
@@ -688,6 +700,7 @@
 		EDD003506D4E4CA0B7B8E1ECAB7A1397 /* BLBase */ = {
 			isa = PBXGroup;
 			children = (
+				62CCA4AE218AFE0C00A79825 /* BLCell */,
 				467D6E51576C497EBA94F09CA4134142 /* BLModel */,
 				2A4F4014C36898495AC71E3DCBDB88CA /* BLNavigationController */,
 				7E49CEFB77BAFD20BDBDA21C3398C604 /* BLTabBarController */,
@@ -746,7 +759,6 @@
 				A0B684665D0DF2A629D36A9231E2B033 /* Resources */,
 				C507C4DE5A9F96B6EC451B2A6AB11B57 /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -765,6 +777,7 @@
 				250096975CC45B7EAD722CA5421E79EB /* BLTableView+Refresh.h in Headers */,
 				171296620B03AC4D4F6E863101ABF197 /* BLTableView.h in Headers */,
 				8C2FD90BB435E2F6DC8F0D2C36C0283D /* BLView.h in Headers */,
+				62CCA4B1218AFE2100A79825 /* BLCell.h in Headers */,
 				77AC9B921C0DB23721D6719A4B94D39F /* BLViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1049,6 +1062,7 @@
 				B78F8B4DBFBF01FB7A9EB785BB10F01E /* BLBase-dummy.m in Sources */,
 				FE666102E008548414CCCB89E2560131 /* BLModel.m in Sources */,
 				BF3777B79E54EA7666EB6EC8804235B4 /* BLNavigationController.m in Sources */,
+				62CCA4B2218AFE2100A79825 /* BLCell.m in Sources */,
 				864E61ADF045BAA325C74B78F31F0144 /* BLTabBarController.m in Sources */,
 				2858A25102E3EA8916EACEF2D4288FD6 /* BLTableView+EmptyDataSource.m in Sources */,
 				2934280730E058B4630D808AB886FE90 /* BLTableView+Refresh.m in Sources */,

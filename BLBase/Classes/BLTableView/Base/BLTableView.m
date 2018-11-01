@@ -6,7 +6,6 @@
 //
 
 #import "BLTableView.h"
-
 @interface BLTableView ()<UITableViewDataSource,UITableViewDelegate>
 @end
 @implementation BLTableView
@@ -26,12 +25,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self p_configTable];
-        if ([self respondsToSelector:NSSelectorFromString(@"bs_configRefreshTable")]) {
-            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configRefreshTable") withObject:nil waitUntilDone:YES];
-        }
-        if ([self respondsToSelector:NSSelectorFromString(@"bs_configEmptyTable")]) {
-            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configEmptyTable") withObject:nil waitUntilDone:YES];
-        }
     }
     return self;
 }
@@ -40,12 +33,6 @@
     self = [super initWithFrame:frame style:style];
     if (self) {
         [self p_configTable];
-        if ([self respondsToSelector:NSSelectorFromString(@"bs_configRefreshTable")]) {
-            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configRefreshTable") withObject:nil waitUntilDone:YES];
-        }
-        if ([self respondsToSelector:NSSelectorFromString(@"bs_configEmptyTable")]) {
-            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configEmptyTable") withObject:nil waitUntilDone:YES];
-        }
     }
     return self;
 }
@@ -54,12 +41,6 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self p_configTable];
-        if ([self respondsToSelector:NSSelectorFromString(@"bs_configRefreshTable")]) {
-            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configRefreshTable") withObject:nil waitUntilDone:YES];
-        }
-        if ([self respondsToSelector:NSSelectorFromString(@"bs_configEmptyTable")]) {
-            [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configEmptyTable") withObject:nil waitUntilDone:YES];
-        }
     }
     return self;
 }
@@ -78,6 +59,18 @@
     if (@available(iOS 11.0, *)) {
         self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
+    
+#if __has_include(<BLBase/BLTableView+EmptyDataSource.h>)
+    if ([self respondsToSelector:NSSelectorFromString(@"bs_configEmptyTable")]) {
+        [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configEmptyTable") withObject:nil waitUntilDone:YES];
+    }
+#endif
+    
+#if __has_include(<BLBase/BLTableView+Refresh.h>)
+    if ([self respondsToSelector:NSSelectorFromString(@"bs_configRefreshTable")]) {
+        [self performSelectorOnMainThread:NSSelectorFromString(@"bs_configRefreshTable") withObject:nil waitUntilDone:YES];
+    }
+#endif
 }
 
 

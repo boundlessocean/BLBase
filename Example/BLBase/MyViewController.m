@@ -7,16 +7,17 @@
 //
 
 #import "MyViewController.h"
-
+@import BLBase.BLTableView;
+@import BLBase.BLTableView_Refresh;
 @interface MyViewController ()
-
+@property (nonatomic, strong) BLTableView *tableView;
 @end
 
 @implementation MyViewController
 
 - (void)bs_configViewDataSourse{
     [super bs_configViewDataSourse];
-    self.bs_loadingView.bs_isNeedLoading = YES;
+    self.bs_loadingView.bs_isNeedLoading = NO;
     
     [self bs_configNavItem:BLNavItemTypeRight
                      image:nil
@@ -25,6 +26,11 @@
                     action:^{
                         NSLog(@"ss");
                     }];
+}
+
+- (void)bs_initializeSubviews{
+    [super bs_initializeSubviews];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +48,14 @@
     MyViewController *my = [MyViewController new];
     my.title = @"aaa";
     [self.navigationController pushViewController:my animated:YES];
+}
+
+- (BLTableView *)tableView{
+    if (!_tableView) {
+        _tableView = [BLTableView bs_tableView];
+        _tableView.backgroundColor = [UIColor grayColor];
+    }
+    return _tableView;
 }
 
 @end

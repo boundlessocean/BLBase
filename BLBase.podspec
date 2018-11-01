@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLBase'
-  s.version          = '0.1.9'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of BLBase.'
 
 # This description is used to generate tags and improve search results.
@@ -66,5 +66,9 @@ TODO: Add long description of the pod here.
   
   s.subspec 'BLTabBarController' do |ss|
       ss.source_files = 'BLBase/Classes/BLTabBarController/**/*'
+  end
+  
+  s.subspec 'BLCell' do |ss|
+      ss.source_files = 'BLBase/Classes/BLCell/**/*'
   end
 end
