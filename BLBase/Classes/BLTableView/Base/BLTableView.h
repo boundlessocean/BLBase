@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger,MTTableViewRegisteType){
 
 #define kDefaultTableFrame CGRectMake(\
 0,\
-UIApplication.sharedApplication.statusBarFrame.size.height + 44,\
+0,\
 UIScreen.mainScreen.bounds.size.width,\
 UIScreen.mainScreen.bounds.size.height - UIApplication.sharedApplication.statusBarFrame.size.height)
 
