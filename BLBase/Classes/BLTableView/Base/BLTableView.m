@@ -87,7 +87,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (!_bs_rowCountBlock && indexPath.row >= self.bs_dataArray.count) return [UITableViewCell new];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_bs_identifiers[indexPath.section]];
+    /** 当实现了 _bs_sectionCountBlock 并且 _bs_identifiers只有一个标识 的时候取第一个 */
+    NSString *identifier = _bs_sectionCountBlock && _bs_identifiers.count == 1 ? _bs_identifiers.firstObject : _bs_identifiers[indexPath.section];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell = !_bs_cellBlock ? cell : _bs_cellBlock(cell,indexPath);
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
