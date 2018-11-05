@@ -37,6 +37,10 @@ typedef CGFloat(^TableViewHeightForFooterBlock)(NSInteger section);
 typedef UIView *(^TableViewHeaderBlock)(NSInteger section);
 /** 头高 */
 typedef CGFloat(^TableViewHeightForHeaderBlock)(NSInteger section);
+/** 索引 */
+typedef NSArray <NSString *> *(^TableViewSectionIndexTitlesBlock)(void);
+/** 索引点击 */
+typedef NSInteger (^TableViewSectionIndexSelectedBlock)(NSString *title,NSInteger index);
 /** Scroll滚动 */
 typedef void(^TableViewDidScroll)(__kindof UIScrollView *scrollView);
 
@@ -54,6 +58,8 @@ typedef void(^TableViewDidScroll)(__kindof UIScrollView *scrollView);
 @property (nonatomic, copy ,nullable) TableViewHeightForHeaderBlock bs_headerHeightBlock;
 @property (nonatomic, copy ,nullable) TableViewHeightForFooterBlock bs_footerHeightBlock;
 @property (nonatomic, copy ,nullable) TableViewCellSelectedBlock bs_cellSelectedBlock;
+@property (nonatomic, copy ,nullable) TableViewSectionIndexTitlesBlock bs_sectionIndexTitlesBlock;
+@property (nonatomic, copy ,nullable) TableViewSectionIndexSelectedBlock bs_sectionIndexSelectedBlock;
 /** UIScrollViewDelegate */
 @property (nonatomic, copy ,nullable) TableViewDidScroll bs_viewDidScroll;
 

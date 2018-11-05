@@ -111,6 +111,14 @@
     return !_bs_footerHeightBlock ? CGFLOAT_MIN : _bs_footerHeightBlock(section);
 }
 
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
+    return !_bs_sectionIndexTitlesBlock ? nil : _bs_sectionIndexTitlesBlock();
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString*)title atIndex:(NSInteger)index{
+    return !_bs_sectionIndexSelectedBlock ? 0 : _bs_sectionIndexSelectedBlock(title,index);
+}
+
 #pragma mark - - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (!_bs_rowCountBlock && indexPath.row >= self.bs_dataArray.count) return 0;
