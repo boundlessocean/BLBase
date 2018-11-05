@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "BLCell.h"
 #import "BLModel.h"
 #import "BLNavigationController.h"
 #import "BLTabBarController.h"
