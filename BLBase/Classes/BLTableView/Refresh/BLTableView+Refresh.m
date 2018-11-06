@@ -72,7 +72,7 @@ static char refreshBlockKey;
     if (self.bs_supportRefreshUp != bs_supportRefreshUp) {
         objc_setAssociatedObject(self, &supportRefreshUpKey, @(bs_supportRefreshUp), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         if (bs_supportRefreshUp) {
-            self.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+            self.mj_footer = [MJRefreshBackStateFooter footerWithRefreshingBlock:^{
                 self.loadType = MTTableViewLoadTypeMore;
                 !self.bs_refreshBlock ? : self.bs_refreshBlock(MTTableViewLoadTypeMore);
             }];
