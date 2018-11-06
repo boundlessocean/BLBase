@@ -98,8 +98,8 @@ static char refreshBlockKey;
                 !self.bs_refreshBlock ? : self.bs_refreshBlock(MTTableViewLoadTypeReload);
             }];
 
-            self.mj_header.lastUpdatedTimeLabel.hidden = YES ;
-            self.mj_header.stateLabel.hidden = YES ;
+            ((MJRefreshNormalHeader *)self.mj_header).lastUpdatedTimeLabel.hidden = YES;
+            ((MJRefreshNormalHeader *)self.mj_header).stateLabel.hidden = YES;
         } else {
             [self.mj_header removeFromSuperview];
         }
