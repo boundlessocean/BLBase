@@ -72,7 +72,7 @@ static char refreshBlockKey;
     if (self.bs_supportRefreshUp != bs_supportRefreshUp) {
         objc_setAssociatedObject(self, &supportRefreshUpKey, @(bs_supportRefreshUp), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         if (bs_supportRefreshUp) {
-            self.mj_footer = [MJRefreshBackStateFooter footerWithRefreshingBlock:^{
+            self.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
                 self.loadType = MTTableViewLoadTypeMore;
                 !self.bs_refreshBlock ? : self.bs_refreshBlock(MTTableViewLoadTypeMore);
             }];
@@ -86,7 +86,7 @@ static char refreshBlockKey;
     if (self.bs_supportRefreshDown != bs_supportRefreshDown) {
         objc_setAssociatedObject(self, &supportRefreshDownKey, @(bs_supportRefreshDown), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         if (bs_supportRefreshDown) {
-            self.mj_header = [MJRefreshHeader headerWithRefreshingBlock:^{
+            self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
                 self.loadType = MTTableViewLoadTypeReload;
                 if (self.bs_supportRefreshUp) {
                     [self.mj_footer resetNoMoreData];
@@ -97,6 +97,9 @@ static char refreshBlockKey;
                 self.bs_pageIndex = nil;
                 !self.bs_refreshBlock ? : self.bs_refreshBlock(MTTableViewLoadTypeReload);
             }];
+
+            self.mj_header.lastUpdatedTimeLabel.hidden = YES ;
+            self.mj_header.stateLabel.hidden = YES ;
         } else {
             [self.mj_header removeFromSuperview];
         }
