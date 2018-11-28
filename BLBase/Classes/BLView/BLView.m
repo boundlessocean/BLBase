@@ -30,4 +30,8 @@
 - (void)bs_configActions{};
 - (void)bs_initializeSubviews{};
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self endEditing:YES];
+}
+
 @end

@@ -36,6 +36,10 @@
     }
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
 #pragma mark - - Public
 - (void)bs_initializeSubviews{
     if (self.bs_loadingView.bs_isNeedLoading) {
