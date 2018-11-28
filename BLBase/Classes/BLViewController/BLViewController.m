@@ -21,6 +21,21 @@
     [self bs_configActions];
     [self bs_requestData];
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (self.bs_needSwitchStatuBarStyle) {
+        UIApplication.sharedApplication.statusBarStyle = !UIApplication.sharedApplication.statusBarStyle;
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    if (self.bs_needSwitchStatuBarStyle) {
+        UIApplication.sharedApplication.statusBarStyle = !UIApplication.sharedApplication.statusBarStyle;
+    }
+}
+
 #pragma mark - - Public
 - (void)bs_initializeSubviews{
     if (self.bs_loadingView.bs_isNeedLoading) {

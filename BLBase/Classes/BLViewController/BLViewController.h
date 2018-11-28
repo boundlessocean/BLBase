@@ -17,7 +17,10 @@ typedef NS_ENUM(NSInteger, BLNavItemType){
 /** loading视图 */
 @property (nonatomic, strong) BLLoadingView *bs_loadingView;
 /** 事件响应 */
-@property(nonatomic,copy) void(^bs_viewAction)(id data,...);
+@property(nonatomic, copy) void(^bs_viewAction)(id data,...);
+/** 是否需要切换状态栏 */
+@property (nonatomic, assign) BOOL bs_needSwitchStatuBarStyle;
+
 - (void)bs_initializeSubviews;
 - (void)bs_configActions;
 - (void)bs_configViewDataSourse;
