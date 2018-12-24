@@ -21,6 +21,8 @@ typedef void(^TableViewRefreshBlock)(MTTableViewLoadType loadType);
 @property (nonatomic ,strong, nullable) NSString *bs_pageIndex;
 /** 页码Key */
 @property (nonatomic, strong, nullable) NSString *bs_pageIndexKey;
+/** 数据源key */
+@property (nonatomic, strong) NSString *bs_dataArrayKey;
 
 /** 是否支持下拉刷新 */
 @property (nonatomic ,assign) BOOL bs_supportRefreshDown;
