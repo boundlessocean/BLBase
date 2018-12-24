@@ -41,7 +41,7 @@ static char dataArrayKey;
 
 - (NSString *)bs_dataArrayKey{
     NSString *data = objc_getAssociatedObject(self, &dataArrayKey);
-    return data.length ? data : @"data";
+    return data.length ? data : @"Data";
 }
 
 - (MTTableViewLoadType)loadType{
