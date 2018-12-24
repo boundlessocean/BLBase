@@ -38,11 +38,11 @@ static char dataArrayKey;
     return objc_getAssociatedObject(self, &refreshDownNeedRemoveAllDatasKey);
 }
 
-
 - (NSString *)bs_dataArrayKey{
     NSString *data = objc_getAssociatedObject(self, &dataArrayKey);
     return data.length ? data : @"Data";
 }
+
 
 - (MTTableViewLoadType)loadType{
     return [objc_getAssociatedObject(self, &loadTypeKey) integerValue];
@@ -58,6 +58,10 @@ static char dataArrayKey;
 
 - (void)setBs_pageIndexKey:(NSString *)bs_pageIndexKey{
     objc_setAssociatedObject(self, &pageIndexKeyI, bs_pageIndexKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (void)setBs_dataArrayKey:(NSString *)bs_dataArrayKey{
+    objc_setAssociatedObject(self, &dataArrayKey, bs_dataArrayKey, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)setBs_refreshDownNeedRemoveAllDatas:(BOOL)bs_refreshDownNeedRemoveAllDatas{
