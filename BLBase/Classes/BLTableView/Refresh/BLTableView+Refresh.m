@@ -15,6 +15,7 @@ static char supportRefreshDownKey;
 static char refreshDownNeedRemoveAllDatasKey;
 static char loadTypeKey;
 static char refreshBlockKey;
+static char dataArrayKey;
 @implementation BLTableView (Refresh)
 
 - (NSString *)bs_pageIndex{
@@ -35,6 +36,12 @@ static char refreshBlockKey;
 
 - (BOOL)bs_refreshDownNeedRemoveAllDatas{
     return objc_getAssociatedObject(self, &refreshDownNeedRemoveAllDatasKey);
+}
+
+
+- (NSString *)bs_dataArrayKey{
+    NSString *data = objc_getAssociatedObject(self, &dataArrayKey);
+    return data.length ? data : @"data";
 }
 
 - (MTTableViewLoadType)loadType{
@@ -65,6 +72,9 @@ static char refreshBlockKey;
 - (void)setBs_refreshBlock:(TableViewRefreshBlock)bs_refreshBlock{
     objc_setAssociatedObject(self, &refreshBlockKey, bs_refreshBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
+
+
+
 
 
 - (void)setBs_supportRefreshUp:(BOOL)bs_supportRefreshUp{
