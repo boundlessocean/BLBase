@@ -36,11 +36,12 @@ typedef void(^TableViewRefreshBlock)(MTTableViewLoadType loadType);
 
 
 
-/** 结束上拉刷新 */
+/** 结束上下拉刷新 */
 - (void)bs_tableViewEndRefresh;
 /** 进入刷新 */
 - (void)bs_tableViewEnterRefresh;
-
+/** 没有更多数据提示 */
+- (void)bs_tableViewEndRefreshWithNoMoreData;
 @end
 
 NS_ASSUME_NONNULL_END

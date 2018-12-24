@@ -113,6 +113,10 @@ static char refreshBlockKey;
     if (self.bs_supportRefreshDown) {
         [self.mj_header endRefreshing];
     }
+    
+    if(self.bs_supportRefreshUp){
+        [self.mj_footer endRefreshing];
+    }
 }
 
 - (void)bs_tableViewEnterRefresh{
@@ -121,6 +125,12 @@ static char refreshBlockKey;
     }
 }
 
+
+- (void)bs_tableViewEndRefreshWithNoMoreData{
+    if(self.bs_supportRefreshUp){
+        [self.mj_footer endRefreshingWithNoMoreData];
+    }
+}
 
 - (void)bs_configRefreshTable{
     self.bs_supportRefreshUp = YES;
