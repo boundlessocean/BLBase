@@ -166,6 +166,7 @@
 }
 
 - (void)bs_dismissLoading{
+    self.hidden = YES;
     self.boxView.hidden = YES;
     self.loadLabel.hidden = YES;
     _messageLabel.hidden = NO;
@@ -176,6 +177,7 @@
 }
 
 - (void)bs_showLoading{
+    self.hidden = NO;
     _boxView.hidden = NO;
     _loadLabel.hidden = NO;
     _messageLabel.hidden = YES;
