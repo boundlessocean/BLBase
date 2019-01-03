@@ -6,9 +6,10 @@
 //
 
 #import "BLTableView.h"
+#import "UIScrollView+EmptyDataSet.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BLTableView (EmptyDataSource)
+@interface BLTableView (EmptyDataSource)<DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 /** 无数据标题 */
 @property (nonatomic, strong) NSString *bs_emptyTitle;
 /** 无数据图 */

@@ -6,12 +6,11 @@
 //
 
 #import "BLTableView+EmptyDataSource.h"
-#import "UIScrollView+EmptyDataSet.h"
 #import <objc/runtime.h>
 static char emptyImageKey;
 static char emptyTitleKey;
 static char emptyBgColorKey;
-@interface BLTableView()<DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
+@interface BLTableView()
 
 @end
 
