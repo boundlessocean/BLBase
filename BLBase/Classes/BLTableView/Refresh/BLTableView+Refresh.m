@@ -35,7 +35,7 @@ static char dataArrayKey;
 }
 
 - (BOOL)bs_refreshDownNeedRemoveAllDatas{
-    return objc_getAssociatedObject(self, &refreshDownNeedRemoveAllDatasKey);
+    return [objc_getAssociatedObject(self, &refreshDownNeedRemoveAllDatasKey) integerValue];
 }
 
 - (NSString *)bs_dataArrayKey{
