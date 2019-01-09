@@ -44,6 +44,19 @@ typedef NSInteger (^TableViewSectionIndexSelectedBlock)(NSString *title,NSIntege
 /** Scroll滚动 */
 typedef void(^TableViewDidScroll)(__kindof UIScrollView *scrollView);
 
+/** 即将显示cell */
+typedef void(^TableViewCellWillDisplayBlock)(NSIndexPath * indexPath, UITableViewCell *cell);
+/** 即将显示Header */
+typedef void(^TableViewHeaderWillDisplayBlock)(NSInteger section, UIView *header);
+/** 即将显示footer */
+typedef void(^TableViewFooterWillDisplayBlock)(NSInteger section, UIView *header);
+
+/** 已经显示cell */
+typedef void(^TableViewCellDidDisplayBlock)(NSIndexPath * indexPath, UITableViewCell *cell);
+/** 已经显示Header */
+typedef void(^TableViewHeaderDidDisplayBlock)(NSInteger section, UIView *header);
+/** 已经显示footer */
+typedef void(^TableViewFooterDidDisplayBlock)(NSInteger section, UIView *header);
 
 @interface BLTableView : UITableView
 
@@ -60,6 +73,14 @@ typedef void(^TableViewDidScroll)(__kindof UIScrollView *scrollView);
 @property (nonatomic, copy ,nullable) TableViewCellSelectedBlock bs_cellSelectedBlock;
 @property (nonatomic, copy ,nullable) TableViewSectionIndexTitlesBlock bs_sectionIndexTitlesBlock;
 @property (nonatomic, copy ,nullable) TableViewSectionIndexSelectedBlock bs_sectionIndexSelectedBlock;
+
+@property (nonatomic, copy ,nullable) TableViewCellDidDisplayBlock bs_cellDidDisplayBlock;
+@property (nonatomic, copy ,nullable) TableViewCellWillDisplayBlock bs_cellWillDisplayBlock;
+@property (nonatomic, copy ,nullable) TableViewHeaderDidDisplayBlock bs_headerDidDisplayBlock;
+@property (nonatomic, copy ,nullable) TableViewHeaderWillDisplayBlock bs_headerWillDisplayBlock;
+@property (nonatomic, copy ,nullable) TableViewFooterDidDisplayBlock bs_footerDidDisplayBlock;
+@property (nonatomic, copy ,nullable) TableViewFooterWillDisplayBlock bs_footerWillDisplayBlock;
+
 /** UIScrollViewDelegate */
 @property (nonatomic, copy ,nullable) TableViewDidScroll bs_viewDidScroll;
 

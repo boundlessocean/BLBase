@@ -130,7 +130,24 @@
     !_bs_cellSelectedBlock ? : _bs_cellSelectedBlock(indexPath);
 }
 
-
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    !_bs_cellWillDisplayBlock ? : _bs_cellWillDisplayBlock(indexPath,cell);
+}
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
+    !_bs_headerDidDisplayBlock ? : _bs_headerDidDisplayBlock(section,view);
+}
+- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section{
+    !_bs_footerWillDisplayBlock ? : _bs_footerWillDisplayBlock(section,view);
+}
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath {
+    !_bs_cellDidDisplayBlock ? : _bs_cellDidDisplayBlock(indexPath,cell);
+}
+- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section{
+    !_bs_headerDidDisplayBlock ? : _bs_headerDidDisplayBlock(section,view);
+}
+- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section{
+    !_bs_footerDidDisplayBlock ? : _bs_footerDidDisplayBlock(section,view);
+}
 #pragma mark - - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     !_bs_viewDidScroll ? : _bs_viewDidScroll(scrollView);
