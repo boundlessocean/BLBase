@@ -177,7 +177,9 @@
     self.userInteractionEnabled = YES;
     _bs_lodingState = BLLoadingViewStateNormol;
     [self.boxView.layer removeAnimationForKey:@"rotation"];
-    dispatch_cancel(_timer);
+    if (_timer) {
+        dispatch_cancel(_timer);
+    }
 }
 
 - (void)bs_showLoading{
@@ -212,7 +214,9 @@
         }
         i++;
     });
-    dispatch_resume(_timer);
+    if (_timer) {
+        dispatch_resume(_timer);
+    }
 }
 
 #pragma mark - - Private
