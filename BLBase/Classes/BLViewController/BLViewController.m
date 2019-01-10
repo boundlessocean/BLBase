@@ -19,7 +19,6 @@
     [self bs_configViewDataSourse];
     [self bs_initializeSubviews];
     [self bs_configActions];
-    [self bs_requestData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
