@@ -59,10 +59,11 @@
 - (void)bs_configActions{
     __weak typeof(self) weakself = self;
     self.bs_loadingView.bs_reloadData = ^{
-        [weakself bs_requestData];
+        [weakself.bs_loadingView bs_showLoading];
+        [weakself nt_requestData];
     };
 }
-- (void)bs_requestData{};
+- (void)nt_requestData{};
 - (void)bs_configNavItem:(BLNavItemType)type
                    image:(UIImage *)image
                    title:(NSString *)title

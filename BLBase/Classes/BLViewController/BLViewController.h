@@ -24,8 +24,8 @@ typedef NS_ENUM(NSInteger, BLNavItemType){
 - (void)bs_initializeSubviews;
 - (void)bs_configActions;
 - (void)bs_configViewDataSourse;
-- (void)bs_requestData;
 
+- (void)nt_requestData;
 /**
  设置导航栏左右Item
 
