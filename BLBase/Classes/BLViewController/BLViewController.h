@@ -45,11 +45,19 @@ typedef NS_ENUM(NSInteger, BLNavItemType){
 
 NS_ASSUME_NONNULL_END
 
+typedef NS_ENUM(NSInteger,BLLoadingViewState){
+    BLLoadingViewStateNormol,
+    BLLoadingViewStateLoding,
+    BLLoadingViewStateFailed,
+};
+
 @interface BLLoadingView : UIView
 /** 是否需要loading视图 */
 @property (nonatomic, assign) BOOL bs_isNeedLoading;
 /** 加载失败，点击刷新页面 */
 @property (nonatomic, copy) void(^bs_reloadData)(void);
+/** 加载状态 */
+@property (nonatomic, assign, readonly) BLLoadingViewState bs_lodingState;
 /** loading */
 - (void)bs_showLoading;
 - (void)bs_dismissLoading;

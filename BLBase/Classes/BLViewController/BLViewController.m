@@ -139,6 +139,7 @@
 @property (nonatomic, strong) UILabel *loadLabel;
 @property (nonatomic, strong) UIImageView *failedView;
 @property (nonatomic, strong) UILabel *messageLabel;
+@property (nonatomic, assign) BLLoadingViewState bs_lodingState;
 @end
 
 @implementation BLLoadingView{
@@ -162,7 +163,9 @@
                   IMG:(UIImage *)failedIMG{
     [self bs_dismissLoading];
     _messageLabel.text = message;
-    _failedView.image = failedIMG;   
+    _failedView.image = failedIMG;
+    _bs_lodingState = BLLoadingViewStateFailed;
+    self.hidden = NO;
 }
 
 - (void)bs_dismissLoading{
@@ -172,6 +175,7 @@
     _messageLabel.hidden = NO;
     _failedView.hidden = NO;
     self.userInteractionEnabled = YES;
+    _bs_lodingState = BLLoadingViewStateNormol;
     [self.boxView.layer removeAnimationForKey:@"rotation"];
     dispatch_cancel(_timer);
 }
@@ -198,6 +202,7 @@
     _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
     dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
     dispatch_source_set_event_handler(_timer, ^{
+        self.bs_lodingState = BLLoadingViewStateLoding;
         if (i%3 == 0) {
             self->_loadLabel.text = @"加载中.";
         }else if (i%3 == 1){
@@ -213,6 +218,8 @@
 #pragma mark - - Private
 - (void)p_initianize{
     self.backgroundColor = [UIColor whiteColor];
+    
+    _bs_lodingState = BLLoadingViewStateNormol;
     [self addSubview:self.boxView];
     [self addSubview:self.loadLabel];
     [self addSubview:self.failedView];
@@ -289,7 +296,9 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    !_bs_reloadData ? : _bs_reloadData();
+    if (_bs_lodingState == BLLoadingViewStateFailed) {
+        !_bs_reloadData ? : _bs_reloadData();
+    }
 }
 
 @end
