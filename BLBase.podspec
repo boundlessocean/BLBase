@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLBase'
-  s.version          = "2.0.1"
+  s.version          = '2.1'
   s.summary          = 'A short description of BLBase.'
 
 # This description is used to generate tags and improve search results.
