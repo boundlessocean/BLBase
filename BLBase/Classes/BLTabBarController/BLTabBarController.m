@@ -25,11 +25,11 @@
     
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = _defaultColor;
-    textAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:11];
+    textAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:11];
     
     NSMutableDictionary *selectTextAttrs = [NSMutableDictionary dictionary];
     selectTextAttrs[NSForegroundColorAttributeName] = _selectColor;
-    selectTextAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:11];
+    selectTextAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:11];
     
     [vc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [vc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
