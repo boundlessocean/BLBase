@@ -275,7 +275,7 @@
     if (!_loadLabel) {
         _loadLabel = [UILabel new];
         _loadLabel.text = @"加载中";
-        _loadLabel.font = [UIFont systemFontOfSize:13];
+        _loadLabel.font = [UIFont boldSystemFontOfSize:13];
         _loadLabel.textColor = [[UIColor blackColor] colorWithAlphaComponent:0.7];
     }
     return _loadLabel;
