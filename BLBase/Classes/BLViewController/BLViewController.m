@@ -7,8 +7,8 @@
 
 #import "BLViewController.h"
 #import <Masonry/Masonry.h>
+#import "UIBarButtonItem+Block.h"
 @interface BLViewController ()
-@property (nonatomic, copy) void(^itemActionBlock)(void);
 @end
 
 @implementation BLViewController
@@ -68,7 +68,6 @@
                    title:(NSString *)title
               titleColor:(UIColor *)titleColor
                   action:(void(^)(void))itemAction{
-    _itemActionBlock = itemAction;
     UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc]
                                    initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                    target:nil
@@ -76,14 +75,23 @@
     fixedSpace.width = 5;
 
     if (type) {
-        self.navigationItem.leftBarButtonItems = @[fixedSpace,
-                                                   [self p_configImage:image
-                                                                 title:title
-                                                            titleColor:titleColor]];
+        if (image) {
+            self.navigationItem.leftBarButtonItem = [self p_configImage:image
+                                                                  title:title
+                                                             titleColor:titleColor
+                                                                 action:itemAction];
+        } else {
+            self.navigationItem.leftBarButtonItems = @[fixedSpace,
+                                                       [self p_configImage:image
+                                                                     title:title
+                                                                titleColor:titleColor
+                                                                    action:itemAction]];
+        }
     } else{
         self.navigationItem.rightBarButtonItems = @[[self p_configImage:image
                                                                   title:title
-                                                             titleColor:titleColor],
+                                                             titleColor:titleColor
+                                                                 action:itemAction],
                                                     fixedSpace];
     }
 }
@@ -91,19 +99,20 @@
 
 #pragma mark - - Private
 - (UIBarButtonItem *)p_configImage:(UIImage *)image
-                           title:(NSString *)title
-                      titleColor:(UIColor *)titleColor{
+                             title:(NSString *)title
+                        titleColor:(UIColor *)titleColor
+                            action:(void(^)(void))itemAction{
         UIBarButtonItem *item;
     if (image != nil) {
-        item = [[UIBarButtonItem alloc] initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                style:UIBarButtonItemStylePlain
-                                               target:self
-                                               action:@selector(p_itemAction)];
+        item = [UIBarButtonItem initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                        style:UIBarButtonItemStylePlain
+                                       target:self
+                                  blockAction:itemAction];
     }else{
-        item = [[UIBarButtonItem alloc] initWithTitle:title
-                                                style:UIBarButtonItemStylePlain
-                                               target:self
-                                               action:@selector(p_itemAction)];
+        item = [UIBarButtonItem initWithTitle:title
+                                        style:UIBarButtonItemStylePlain
+                                       target:self
+                                  blockAction:itemAction];
         
         NSMutableDictionary * textNormalAttr = [NSMutableDictionary dictionary];
         textNormalAttr[NSFontAttributeName] = [UIFont systemFontOfSize:15];
@@ -113,12 +122,10 @@
         [item setTitleTextAttributes:textNormalAttr forState:UIControlStateHighlighted];
         [item setTitleTextAttributes:textNormalAttr forState:UIControlStateSelected];
     }
+    
     return item;
 }
 
-- (void)p_itemAction{
-    !_itemActionBlock ? : _itemActionBlock();
-}
 
 - (BLLoadingView *)bs_loadingView{
     if (!_bs_loadingView) {
