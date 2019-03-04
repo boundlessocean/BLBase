@@ -52,8 +52,8 @@
 		5C99B9249D47053A556F8355E88611C3 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3981EDADF171BEE1D2E80F3D11119604 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62495122E8BDD7378BF308F4DEA7ABBF /* BLBase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 088F0197C758A9E9DAAE31F1C7AA47A4 /* BLBase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62CC7EEBA575F6ED43B46E3DFD1FFEE5 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 83893AD4D93533E2766A2361F93542D9 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62D0343A222CE44D002C56F4 /* UIBarButtonItem+Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D03438222CE44D002C56F4 /* UIBarButtonItem+Block.h */; };
-		62D0343B222CE44D002C56F4 /* UIBarButtonItem+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D03439222CE44D002C56F4 /* UIBarButtonItem+Block.m */; };
+		62D0343E222D03E0002C56F4 /* UIBarButtonItem+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D0343C222D03DF002C56F4 /* UIBarButtonItem+Block.m */; };
+		62D0343F222D03E0002C56F4 /* UIBarButtonItem+Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D0343D222D03E0002C56F4 /* UIBarButtonItem+Block.h */; };
 		64D3318CD900B39AAA49C669C7488CA1 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = D67374E766962E1DE17F6962786B13F6 /* MASConstraint.m */; };
 		64F1F4A074AEB64B41355A7D272D89DC /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = E598E0F3D225FEBDB40BBB8BDFA65B47 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		654687490EC7F92D626AFD72F1C6CE9D /* Masonry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D7FB43B401E9D50A68E2FC7DFBAF996C /* Masonry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -234,8 +234,8 @@
 		6123A35BB4C246FFE089DC1E0E69E585 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
 		617C3CE20115D656DED74FFF2B032AB5 /* BLTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BLTableView.m; path = BLBase/Classes/BLTableView/Base/BLTableView.m; sourceTree = "<group>"; };
 		61E64E5E1D62814990A943B3B2F80669 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
-		62D03438222CE44D002C56F4 /* UIBarButtonItem+Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Block.h"; sourceTree = "<group>"; };
-		62D03439222CE44D002C56F4 /* UIBarButtonItem+Block.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Block.m"; sourceTree = "<group>"; };
+		62D0343C222D03DF002C56F4 /* UIBarButtonItem+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+Block.m"; path = "BLBase/Classes/BLViewController/UIBarButtonItem+Block.m"; sourceTree = "<group>"; };
+		62D0343D222D03E0002C56F4 /* UIBarButtonItem+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+Block.h"; path = "BLBase/Classes/BLViewController/UIBarButtonItem+Block.h"; sourceTree = "<group>"; };
 		64B7244DED2071C205EF40E99803025B /* Pods-BLBase_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLBase_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		68A9C3EEBE84BAB677C937868A770970 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69369078E9F0C451A9676AFE2CEC8373 /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
@@ -531,10 +531,10 @@
 		7D9DA0B3BB3B2B5F1565E7B8AC3BD13B /* BLViewController */ = {
 			isa = PBXGroup;
 			children = (
+				62D0343D222D03E0002C56F4 /* UIBarButtonItem+Block.h */,
+				62D0343C222D03DF002C56F4 /* UIBarButtonItem+Block.m */,
 				D948D6A044C389ADC53664798D88FED3 /* BLViewController.h */,
 				067524C70A36031B1B7681F21FA10988 /* BLViewController.m */,
-				62D03438222CE44D002C56F4 /* UIBarButtonItem+Block.h */,
-				62D03439222CE44D002C56F4 /* UIBarButtonItem+Block.m */,
 			);
 			name = BLViewController;
 			sourceTree = "<group>";
@@ -823,7 +823,7 @@
 				3B9950321A2423E052C3BEA08768CD93 /* BLCell.h in Headers */,
 				2189E8ED9450EBE41BF5991800DDD6A8 /* BLModel.h in Headers */,
 				FFACF64FD8BD4A1CD7296696A310C5CC /* BLNavigationController.h in Headers */,
-				62D0343A222CE44D002C56F4 /* UIBarButtonItem+Block.h in Headers */,
+				62D0343F222D03E0002C56F4 /* UIBarButtonItem+Block.h in Headers */,
 				1B9D8D4D94E08E2AE3F3F635E31A5AE4 /* BLTabBarController.h in Headers */,
 				EC1DD781AD1EEDC4E6BE2AA7554D77D9 /* BLTableView+EmptyDataSource.h in Headers */,
 				8C54A7DD97859B2440A99C8C6D12F4E3 /* BLTableView+Refresh.h in Headers */,
@@ -1079,7 +1079,7 @@
 				360795468BA837F49FE1C574960247CB /* BLModel.m in Sources */,
 				56B4CD4AA882FF20538177F35BB3478C /* BLNavigationController.m in Sources */,
 				946A8697EACBDA4FEF84F8C242E7DC54 /* BLTabBarController.m in Sources */,
-				62D0343B222CE44D002C56F4 /* UIBarButtonItem+Block.m in Sources */,
+				62D0343E222D03E0002C56F4 /* UIBarButtonItem+Block.m in Sources */,
 				D954542C9992046A4DDD43A971016234 /* BLTableView+EmptyDataSource.m in Sources */,
 				6EBB3E63856521236C4ADE20F25FA584 /* BLTableView+Refresh.m in Sources */,
 				2C04F537526B8144FF97F43B8EBB2DCC /* BLTableView.m in Sources */,
