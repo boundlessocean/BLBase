@@ -13,25 +13,27 @@ static const int BLItemImageBlock_key;
 + (instancetype)initWithTitle:(NSString *)title
                         style:(UIBarButtonItemStyle)style
                   blockAction:(void(^)(void))itemAction{
-    objc_setAssociatedObject(self, &BLItemTitleBlock_key, itemAction, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    return [[UIBarButtonItem alloc] initWithTitle:title style:style target:self action:@selector(titleActionDo:)];
+    UIBarButtonItem *bar = [[UIBarButtonItem alloc] initWithTitle:title style:style target:self action:@selector(titleActionDo:)];
+    objc_setAssociatedObject(bar, &BLItemTitleBlock_key, itemAction, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    return bar;
 }
 
 + (instancetype)initWithImage:(UIImage *)image
                         style:(UIBarButtonItemStyle)style
                   blockAction:(void(^)(void))itemAction{
-    objc_setAssociatedObject(self, &BLItemImageBlock_key, itemAction, OBJC_ASSOCIATION_COPY_NONATOMIC);
-    return [[UIBarButtonItem alloc] initWithImage:image style:style target:self action:@selector(imgActionDo:)];
+    UIBarButtonItem *bar = [[UIBarButtonItem alloc] initWithImage:image style:style target:self action:@selector(imgActionDo:)];
+    objc_setAssociatedObject(bar, &BLItemImageBlock_key, itemAction, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    return bar;
     
 }
 
-- (void)titleActionDo:(id)sender {
-    void(^itemAction)(void)  = objc_getAssociatedObject(self, &BLItemTitleBlock_key);
++ (void)titleActionDo:(UIBarButtonItem *)sender {
+    void(^itemAction)(void)  = objc_getAssociatedObject(sender, &BLItemTitleBlock_key);
     !itemAction ? : itemAction();
 }
 
-- (void)imgActionDo:(id)sender {
-    void(^itemAction)(void)  = objc_getAssociatedObject(self, &BLItemImageBlock_key);
++ (void)imgActionDo:(UIBarButtonItem *)sender {
+    void(^itemAction)(void)  = objc_getAssociatedObject(sender, &BLItemImageBlock_key);
     !itemAction ? : itemAction();
 }
 @end
