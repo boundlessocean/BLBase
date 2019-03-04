@@ -13,14 +13,14 @@ static const int BLItemImageBlock_key;
 + (instancetype)initWithTitle:(NSString *)title
                         style:(UIBarButtonItemStyle)style
                   blockAction:(void(^)(void))itemAction{
-    objc_setAssociatedObject(self, &BLItemTitleBlock_key, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &BLItemTitleBlock_key, itemAction, OBJC_ASSOCIATION_COPY_NONATOMIC);
     return [[UIBarButtonItem alloc] initWithTitle:title style:style target:self action:@selector(titleActionDo:)];
 }
 
 + (instancetype)initWithImage:(UIImage *)image
                         style:(UIBarButtonItemStyle)style
                   blockAction:(void(^)(void))itemAction{
-    objc_setAssociatedObject(self, &BLItemImageBlock_key, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &BLItemImageBlock_key, itemAction, OBJC_ASSOCIATION_COPY_NONATOMIC);
     return [[UIBarButtonItem alloc] initWithImage:image style:style target:self action:@selector(imgActionDo:)];
     
 }
