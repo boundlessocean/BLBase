@@ -12,18 +12,16 @@ static const int BLItemImageBlock_key;
 @implementation UIBarButtonItem (Block)
 + (instancetype)initWithTitle:(NSString *)title
                         style:(UIBarButtonItemStyle)style
-                       target:(id)target
                   blockAction:(void(^)(void))itemAction{
-    objc_setAssociatedObject(self, &BLItemTitleBlock_key, target, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    return [[UIBarButtonItem alloc] initWithTitle:title style:style target:target action:@selector(titleActionDo:)];
+    objc_setAssociatedObject(self, &BLItemTitleBlock_key, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    return [[UIBarButtonItem alloc] initWithTitle:title style:style target:self action:@selector(titleActionDo:)];
 }
 
 + (instancetype)initWithImage:(UIImage *)image
                         style:(UIBarButtonItemStyle)style
-                       target:(id)target
                   blockAction:(void(^)(void))itemAction{
-    objc_setAssociatedObject(self, &BLItemImageBlock_key, target, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    return [[UIBarButtonItem alloc] initWithImage:image style:style target:target action:@selector(imgActionDo:)];
+    objc_setAssociatedObject(self, &BLItemImageBlock_key, self, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    return [[UIBarButtonItem alloc] initWithImage:image style:style target:self action:@selector(imgActionDo:)];
     
 }
 

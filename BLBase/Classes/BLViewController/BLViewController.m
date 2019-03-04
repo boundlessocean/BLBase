@@ -100,12 +100,10 @@
     if (image != nil) {
         item = [UIBarButtonItem initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
                                         style:UIBarButtonItemStylePlain
-                                       target:self
                                   blockAction:itemAction];
     }else{
         item = [UIBarButtonItem initWithTitle:title
                                         style:UIBarButtonItemStylePlain
-                                       target:self
                                   blockAction:itemAction];
         
         NSMutableDictionary * textNormalAttr = [NSMutableDictionary dictionary];
