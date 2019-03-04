@@ -75,18 +75,12 @@
     fixedSpace.width = 5;
 
     if (type) {
-        if (image) {
-            self.navigationItem.leftBarButtonItem = [self p_configImage:image
-                                                                  title:title
-                                                             titleColor:titleColor
-                                                                 action:itemAction];
-        } else {
-            self.navigationItem.leftBarButtonItems = @[fixedSpace,
+        self.navigationItem.leftBarButtonItems = @[fixedSpace,
                                                        [self p_configImage:image
                                                                      title:title
                                                                 titleColor:titleColor
                                                                     action:itemAction]];
-        }
+        
     } else{
         self.navigationItem.rightBarButtonItems = @[[self p_configImage:image
                                                                   title:title
