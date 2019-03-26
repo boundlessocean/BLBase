@@ -20,7 +20,6 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
-
   s.homepage         = 'https://github.com/boundlessocean/BLBase'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -36,17 +35,17 @@ TODO: Add long description of the pod here.
   s.subspec 'BLTableView' do |ss|
       ss.subspec 'Base' do |sss|
           sss.source_files = 'BLBase/Classes/BLTableView/Base/**/*'
-          sss.public_header_files = 'BLBase/Classes/BLTableView/Base/**/*.h'
+          sss.public_header_files = 'BLBase/Classes/BLTableView/Base/*.h'
       end
       ss.subspec 'EmptyDataSet' do |sss|
           sss.source_files = 'BLBase/Classes/BLTableView/EmptyDataSet/**/*'
-          sss.public_header_files = 'BLBase/Classes/BLTableView/EmptyDataSet/**/*.h'
+          sss.public_header_files = 'BLBase/Classes/BLTableView/EmptyDataSet/*.h'
           sss.dependency 'DZNEmptyDataSet'
           sss.dependency 'BLBase/BLTableView/Base'
       end
       ss.subspec 'Refresh' do |sss|
           sss.source_files = 'BLBase/Classes/BLTableView/Refresh/**/*'
-          sss.public_header_files = 'BLBase/Classes/BLTableView/Refresh/**/*.h'
+          sss.public_header_files = 'BLBase/Classes/BLTableView/Refresh/*.h'
           sss.dependency 'MJRefresh'
           sss.dependency 'BLBase/BLTableView/Base'
       end
@@ -54,32 +53,32 @@ TODO: Add long description of the pod here.
   
   s.subspec 'BLModel' do |ss|
       ss.source_files = 'BLBase/Classes/BLModel/**/*'
-      ss.public_header_files = 'BLBase/Classes/BLModel/**/*.h'
+      ss.public_header_files = 'BLBase/Classes/BLModel/*.h'
   end
   
   s.subspec 'BLView' do |ss|
       ss.source_files = 'BLBase/Classes/BLView/**/*'
-      ss.public_header_files = 'BLBase/Classes/BLView/**/*.h'
+      ss.public_header_files = 'BLBase/Classes/BLView/*.h'
   end
   
   s.subspec 'BLViewController' do |ss|
       ss.source_files = 'BLBase/Classes/BLViewController/**/*'
-      ss.public_header_files = 'BLBase/Classes/BLViewController/**/*.h'
+      ss.public_header_files = 'BLBase/Classes/BLViewController/*.h'
       ss.dependency 'Masonry'
   end
   
   s.subspec 'BLNavigationController' do |ss|
       ss.source_files = 'BLBase/Classes/BLNavigationController/**/*'
-      ss.public_header_files = 'BLBase/Classes/BLNavigationController/**/*.h'
+      ss.public_header_files = 'BLBase/Classes/BLNavigationController/*.h'
   end
   
   s.subspec 'BLTabBarController' do |ss|
       ss.source_files = 'BLBase/Classes/BLTabBarController/**/*'
-      ss.public_header_files = 'BLBase/Classes/BLTabBarController/**/*.h'
+      ss.public_header_files = 'BLBase/Classes/BLTabBarController/*.h'
   end
   
   s.subspec 'BLCell' do |ss|
       ss.source_files = 'BLBase/Classes/BLCell/**/*'
-      ss.public_header_files = 'BLBase/Classes/BLCell/**/*.h'
+      ss.public_header_files = 'BLBase/Classes/BLCell/*.h'
   end
 end
