@@ -50,6 +50,7 @@
 		56B4CD4AA882FF20538177F35BB3478C /* BLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E165F9B79D90C974BA4C5EF2DD60C0 /* BLNavigationController.m */; };
 		59737B888A289642002D3E58EF04A941 /* Pods-BLBase_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E2B36816A4BBC26F6B67B7128B573 /* Pods-BLBase_Example-dummy.m */; };
 		5C99B9249D47053A556F8355E88611C3 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3981EDADF171BEE1D2E80F3D11119604 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		622E2567224A1DA000DA3D87 /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 622E2566224A1D9F00DA3D87 /* Base.h */; };
 		62495122E8BDD7378BF308F4DEA7ABBF /* BLBase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 088F0197C758A9E9DAAE31F1C7AA47A4 /* BLBase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62CC7EEBA575F6ED43B46E3DFD1FFEE5 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 83893AD4D93533E2766A2361F93542D9 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62D0343E222D03E0002C56F4 /* UIBarButtonItem+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D0343C222D03DF002C56F4 /* UIBarButtonItem+Block.m */; };
@@ -234,6 +235,7 @@
 		6123A35BB4C246FFE089DC1E0E69E585 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
 		617C3CE20115D656DED74FFF2B032AB5 /* BLTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BLTableView.m; path = BLBase/Classes/BLTableView/Base/BLTableView.m; sourceTree = "<group>"; };
 		61E64E5E1D62814990A943B3B2F80669 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		622E2566224A1D9F00DA3D87 /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = BLBase/Classes/Base.h; sourceTree = "<group>"; };
 		62D0343C222D03DF002C56F4 /* UIBarButtonItem+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+Block.m"; path = "BLBase/Classes/BLViewController/UIBarButtonItem+Block.m"; sourceTree = "<group>"; };
 		62D0343D222D03E0002C56F4 /* UIBarButtonItem+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+Block.h"; path = "BLBase/Classes/BLViewController/UIBarButtonItem+Block.h"; sourceTree = "<group>"; };
 		64B7244DED2071C205EF40E99803025B /* Pods-BLBase_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLBase_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -753,6 +755,7 @@
 		F996F8E8E89B95C3ACE1C37290E13F1F /* BLBase */ = {
 			isa = PBXGroup;
 			children = (
+				622E2566224A1D9F00DA3D87 /* Base.h */,
 				34CB56AE69BBE82D3E4225D23F4F7257 /* BLCell */,
 				14BC0A59E0CE65ACE4A19CED8ACFA329 /* BLModel */,
 				BC3F8A3ED21F34C33702ACAAEA037FDA /* BLNavigationController */,
@@ -822,6 +825,7 @@
 				62495122E8BDD7378BF308F4DEA7ABBF /* BLBase-umbrella.h in Headers */,
 				3B9950321A2423E052C3BEA08768CD93 /* BLCell.h in Headers */,
 				2189E8ED9450EBE41BF5991800DDD6A8 /* BLModel.h in Headers */,
+				622E2567224A1DA000DA3D87 /* Base.h in Headers */,
 				FFACF64FD8BD4A1CD7296696A310C5CC /* BLNavigationController.h in Headers */,
 				62D0343F222D03E0002C56F4 /* UIBarButtonItem+Block.h in Headers */,
 				1B9D8D4D94E08E2AE3F3F635E31A5AE4 /* BLTabBarController.h in Headers */,
