@@ -29,8 +29,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
   
-  s.public_header_files = 'Base/Classes/Base.h'
-  s.source_files = 'Base/Classes/Base.h'
+  s.source_files = 'BLBase/Classes/Base.h'
+  s.public_header_files = 'BLBase/Classes/Base.h'
   
   s.subspec 'BLTableView' do |ss|
       ss.subspec 'Base' do |sss|
