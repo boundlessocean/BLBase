@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
-#import <BLBase/BLViewController.h>
+@import BLBase;
+
 @interface MyViewController : BLViewController
 
 @end

@@ -8,6 +8,8 @@
 #import "BLTableView.h"
 #import "UIScrollView+EmptyDataSet.h"
 
+/** 已经显示footer */
+typedef void(^TableViewEmptyDataTapBlock)(UIScrollView *scrollView, UIView *view);
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BLTableView (EmptyDataSource)<DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
@@ -17,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage *bs_emptyImage;
 /** 背景颜色 */
 @property (nonatomic, strong) UIColor *bs_emptyBgColor;
+
+@property (nonatomic, copy ,nullable) TableViewEmptyDataTapBlock bs_emptyDataTapBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

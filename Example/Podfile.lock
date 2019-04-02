@@ -1,29 +1,29 @@
 PODS:
-  - BLBase (1.0.3):
-    - BLBase/BLCell (= 1.0.3)
-    - BLBase/BLModel (= 1.0.3)
-    - BLBase/BLNavigationController (= 1.0.3)
-    - BLBase/BLTabBarController (= 1.0.3)
-    - BLBase/BLTableView (= 1.0.3)
-    - BLBase/BLView (= 1.0.3)
-    - BLBase/BLViewController (= 1.0.3)
-  - BLBase/BLCell (1.0.3)
-  - BLBase/BLModel (1.0.3)
-  - BLBase/BLNavigationController (1.0.3)
-  - BLBase/BLTabBarController (1.0.3)
-  - BLBase/BLTableView (1.0.3):
-    - BLBase/BLTableView/Base (= 1.0.3)
-    - BLBase/BLTableView/EmptyDataSet (= 1.0.3)
-    - BLBase/BLTableView/Refresh (= 1.0.3)
-  - BLBase/BLTableView/Base (1.0.3)
-  - BLBase/BLTableView/EmptyDataSet (1.0.3):
+  - BLBase (1.2.16):
+    - BLBase/BLCell (= 1.2.16)
+    - BLBase/BLModel (= 1.2.16)
+    - BLBase/BLNavigationController (= 1.2.16)
+    - BLBase/BLTabBarController (= 1.2.16)
+    - BLBase/BLTableView (= 1.2.16)
+    - BLBase/BLView (= 1.2.16)
+    - BLBase/BLViewController (= 1.2.16)
+  - BLBase/BLCell (1.2.16)
+  - BLBase/BLModel (1.2.16)
+  - BLBase/BLNavigationController (1.2.16)
+  - BLBase/BLTabBarController (1.2.16)
+  - BLBase/BLTableView (1.2.16):
+    - BLBase/BLTableView/Base (= 1.2.16)
+    - BLBase/BLTableView/EmptyDataSet (= 1.2.16)
+    - BLBase/BLTableView/Refresh (= 1.2.16)
+  - BLBase/BLTableView/Base (1.2.16)
+  - BLBase/BLTableView/EmptyDataSet (1.2.16):
     - BLBase/BLTableView/Base
     - DZNEmptyDataSet
-  - BLBase/BLTableView/Refresh (1.0.3):
+  - BLBase/BLTableView/Refresh (1.2.16):
     - BLBase/BLTableView/Base
     - MJRefresh
-  - BLBase/BLView (1.0.3)
-  - BLBase/BLViewController (1.0.3):
+  - BLBase/BLView (1.2.16)
+  - BLBase/BLViewController (1.2.16):
     - Masonry
   - DZNEmptyDataSet (1.8.1)
   - Masonry (1.1.0)
@@ -43,7 +43,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLBase: 950dc0c73489b6f54277fca6b138fc26f75bd54b
+  BLBase: 482921840dac8641ea1e74982c33a4057466f0b1
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f

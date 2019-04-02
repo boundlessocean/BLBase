@@ -10,6 +10,7 @@
 static char emptyImageKey;
 static char emptyTitleKey;
 static char emptyBgColorKey;
+static char emptyDataTapKey;
 @interface BLTableView()
 
 @end
@@ -28,12 +29,21 @@ static char emptyBgColorKey;
     
     NSString *text = self.bs_emptyTitle ? self.bs_emptyTitle : @"暂无数据";
     NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:15],
-                                 NSForegroundColorAttributeName: [UIColor colorWithRed:102/255
-                                                                                 green:102/255
-                                                                                  blue:102/255
+                                 NSForegroundColorAttributeName: [UIColor colorWithRed:102.0/255
+                                                                                 green:102.0/255
+                                                                                  blue:102.0/255
                                                                                  alpha:1]};
     
-    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:text];
+    [string addAttributes:attributes range:NSMakeRange(0, text.length)];
+    
+    if ([text containsString:@"点击登录"]) {
+        [string addAttributes:@{NSForegroundColorAttributeName : UIColor.redColor} range:[text rangeOfString:@"点击登录"]];
+    } else if ([text containsString:@"點擊登錄"]){
+        [string addAttributes:@{NSForegroundColorAttributeName : UIColor.redColor} range:[text rangeOfString:@"點擊登錄"]];
+    }
+    
+    return string;
 }
 
 - (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
@@ -51,8 +61,20 @@ static char emptyBgColorKey;
     return self.bs_emptyBgColor ? self.bs_emptyBgColor : [UIColor whiteColor];
 }
 
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view{
+    return !self.bs_emptyDataTapBlock ? : self.bs_emptyDataTapBlock(scrollView,view);
+}
+
 
 #pragma mark - - Property
+
+- (void)setBs_emptyDataTapBlock:(TableViewEmptyDataTapBlock)bs_emptyDataTapBlock{
+    objc_setAssociatedObject(self,
+                             &emptyDataTapKey,
+                             bs_emptyDataTapBlock,
+                             OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 - (void)setBs_emptyImage:(NSString *)bs_emptyImage{
     objc_setAssociatedObject(self,
                              &emptyImageKey,
@@ -72,6 +94,10 @@ static char emptyBgColorKey;
                              &emptyBgColorKey,
                              bs_emptyBgColor,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (TableViewEmptyDataTapBlock)bs_emptyDataTapBlock{
+    return objc_getAssociatedObject(self, &emptyDataTapKey);
 }
 
 - (UIImage *)bs_emptyImage{

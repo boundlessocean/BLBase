@@ -7,8 +7,9 @@
 //
 
 #import "MyViewController.h"
-@import BLBase.BLTableView;
-@import BLBase.BLTableView_Refresh;
+//@import BLBase.BLTableView;
+//@import BLBase.BLTableView_Refresh;
+
 @interface MyViewController ()
 @property (nonatomic, strong) BLTableView *tableView;
 @end

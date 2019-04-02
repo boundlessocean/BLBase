@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "Base.h"
 #import "BLCell.h"
 #import "BLModel.h"
 #import "BLNavigationController.h"
@@ -19,6 +20,7 @@
 #import "BLTableView+Refresh.h"
 #import "BLView.h"
 #import "BLViewController.h"
+#import "UIBarButtonItem+Block.h"
 
 FOUNDATION_EXPORT double BLBaseVersionNumber;
 FOUNDATION_EXPORT const unsigned char BLBaseVersionString[];
