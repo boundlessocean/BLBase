@@ -75,18 +75,36 @@
     fixedSpace.width = 5;
 
     if (type) {
-        self.navigationItem.leftBarButtonItems = @[fixedSpace,
+        if (image) {
+            self.navigationItem.leftBarButtonItem = [self p_configImage:image
+                                                                  title:title
+                                                             titleColor:titleColor
+                                                                 action:itemAction];
+        } else {
+            
+            self.navigationItem.leftBarButtonItems = @[fixedSpace,
                                                        [self p_configImage:image
                                                                      title:title
                                                                 titleColor:titleColor
                                                                     action:itemAction]];
+        }
+        
         
     } else{
-        self.navigationItem.rightBarButtonItems = @[[self p_configImage:image
-                                                                  title:title
-                                                             titleColor:titleColor
-                                                                 action:itemAction],
-                                                    fixedSpace];
+        
+        if (image) {
+            self.navigationItem.rightBarButtonItem = [self p_configImage:image
+                                                                   title:title
+                                                              titleColor:titleColor
+                                                                  action:itemAction];
+        } else {
+            
+            self.navigationItem.rightBarButtonItems = @[[self p_configImage:image
+                                                                      title:title
+                                                                 titleColor:titleColor
+                                                                     action:itemAction],
+                                                        fixedSpace];
+        }
     }
 }
 
