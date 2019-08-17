@@ -6,6 +6,7 @@
 //
 
 #import "BLNavigationController.h"
+#import <objc/runtime.h>
 @interface BLNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
@@ -47,10 +48,12 @@
     if (self.viewControllers.count > 0) {
         // 替换back按钮
         UIImage *back_image = [_backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:back_image
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:self
-                                                                             action:@selector(back)];
+        UIButton *item = [UIButton buttonWithType:UIButtonTypeCustom];
+        item.frame = CGRectMake(0, 0, 44, 44);
+        item.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
+        [item setImage:back_image forState:UIControlStateNormal];
+        
+        UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:item];
         
         viewController.navigationItem.leftBarButtonItem = backBarButtonItem;
         // 隐藏tabbar

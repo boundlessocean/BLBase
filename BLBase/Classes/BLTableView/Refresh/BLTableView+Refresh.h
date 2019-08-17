@@ -37,7 +37,6 @@ typedef void(^TableViewRefreshBlock)(MTTableViewLoadType loadType);
 @property (nonatomic, copy, nullable) TableViewRefreshBlock bs_refreshBlock;
 
 
-
 /** 结束上下拉刷新 */
 - (void)bs_tableViewEndRefresh;
 /** 进入刷新 */

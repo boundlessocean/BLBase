@@ -75,21 +75,23 @@
     fixedSpace.width = 5;
 
     if (type) {
+        
+        NSMutableArray *items = [self.navigationItem.leftBarButtonItems mutableCopy];
         if (image) {
-            self.navigationItem.leftBarButtonItem = [self p_configImage:image
-                                                                  title:title
-                                                             titleColor:titleColor
-                                                                 action:itemAction];
+            UIBarButtonItem *item = [self p_configImage:image
+                                              title:title
+                                         titleColor:titleColor
+                                             action:itemAction];
+            [items addObject:item];
         } else {
             
-            self.navigationItem.leftBarButtonItems = @[fixedSpace,
-                                                       [self p_configImage:image
-                                                                     title:title
-                                                                titleColor:titleColor
-                                                                    action:itemAction]];
+            UIBarButtonItem *item =  [self p_configImage:image
+                                                   title:title
+                                              titleColor:titleColor
+                                                  action:itemAction];
+            [items addObject:item];
         }
-        
-        
+        self.navigationItem.leftBarButtonItems = items;
     } else{
         
         if (image) {
@@ -125,7 +127,7 @@
                                   blockAction:itemAction];
         
         NSMutableDictionary * textNormalAttr = [NSMutableDictionary dictionary];
-        textNormalAttr[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+        textNormalAttr[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
         textNormalAttr[NSForegroundColorAttributeName] = titleColor;
         [item setTitleTextAttributes:textNormalAttr forState:UIControlStateNormal];
         textNormalAttr[NSForegroundColorAttributeName] = [titleColor colorWithAlphaComponent:0.7];

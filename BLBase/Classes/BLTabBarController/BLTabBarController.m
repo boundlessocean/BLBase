@@ -12,6 +12,20 @@
 
 @implementation BLTabBarController
 
+- (instancetype)init{
+    if (self = [super init]) {
+        [self.tabBar addObserver:self forKeyPath:@"backgroundView.shadowView.hidden" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    }
+    return self;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([change[@"new"] integerValue] == 0) {
+        [self.tabBar setValue:@1 forKeyPath:@"backgroundView.shadowView.hidden"];
+    }
+}
+
+
 #pragma mark - - 添加控制器
 - (void)initializeNav:(UINavigationController *)nav
                    VC:(UIViewController *)vc
@@ -39,6 +53,14 @@
     } else {
         [self addChildViewController:vc];
     }
+    
+    
+//    if (UIDevice.currentDevice.systemVersion.floatValue >= 10.0) {
+//        self.tabBar.subviews[0].subviews[1].hidden = YES;
+//    }
+//    else {
+//        [self.tabBar setValue:@(YES) forKeyPath:@"_hidesShadow"];
+//    }
 }
 
 @end
