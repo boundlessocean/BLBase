@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLBase'
-  s.version          = '1.2.19'
+  s.version          = '1.2.20'
   s.summary          = 'A short description of BLBase.'
 
 # This description is used to generate tags and improve search results.
@@ -28,9 +28,6 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-  
-  s.source_files = 'BLBase/Classes/Base.h'
-  s.public_header_files = 'BLBase/Classes/Base.h'
   
   s.subspec 'BLTableView' do |ss|
       ss.subspec 'Base' do |sss|
