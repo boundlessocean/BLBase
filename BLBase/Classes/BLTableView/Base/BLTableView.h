@@ -43,6 +43,9 @@ typedef NSArray <NSString *> *(^TableViewSectionIndexTitlesBlock)(void);
 typedef NSInteger (^TableViewSectionIndexSelectedBlock)(NSString *title,NSInteger index);
 /** Scroll滚动 */
 typedef void(^TableViewDidScroll)(__kindof UIScrollView *scrollView);
+/** Scroll停止滚动 */
+typedef void(^TableViewDidEndDecelerating)(__kindof UIScrollView *scrollView);
+typedef void(^TableViewDidEndDragging)(__kindof UIScrollView *scrollView, BOOL willDecelerate);
 
 /** 即将显示cell */
 typedef void(^TableViewCellWillDisplayBlock)(NSIndexPath * indexPath, UITableViewCell *cell);
@@ -83,6 +86,8 @@ typedef void(^TableViewFooterDidDisplayBlock)(NSInteger section, UIView *header)
 
 /** UIScrollViewDelegate */
 @property (nonatomic, copy ,nullable) TableViewDidScroll bs_viewDidScroll;
+@property (nonatomic, copy ,nullable) TableViewDidEndDragging bs_viewDidEndDragging;
+@property (nonatomic, copy ,nullable) TableViewDidEndDecelerating bs_viewDidEndDecelerating;
 
 /** 默认注册类型为NIB,请在设置重用标示前修改 */
 @property (nonatomic ,assign) MTTableViewRegisteType bs_registeType;

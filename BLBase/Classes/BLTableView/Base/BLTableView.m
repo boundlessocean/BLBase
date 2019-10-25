@@ -161,6 +161,13 @@
     !_bs_viewDidScroll ? : _bs_viewDidScroll(scrollView);
 }
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    !_bs_viewDidEndDragging ? : _bs_viewDidEndDragging(scrollView,decelerate);
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    !_bs_viewDidEndDecelerating ? : _bs_viewDidEndDecelerating(scrollView);
+}
 
 #pragma mark - - Getter
 - (NSMutableArray *)bs_identifiers{
